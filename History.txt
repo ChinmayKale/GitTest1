@@ -1,0 +1,105 @@
+C:\Users\Administrator>git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+C:\Users\Administrator>cd ..
+
+C:\Users>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6CB9-C15C
+
+ Directory of C:\Users
+
+09/20/2014  05:29 AM    <DIR>          .
+09/20/2014  05:29 AM    <DIR>          ..
+06/23/2014  10:14 AM    <DIR>          admin
+09/30/2016  12:37 PM    <DIR>          Administrator
+04/12/2011  01:15 PM    <DIR>          Public
+09/20/2014  05:29 AM    <DIR>          shrikrishna_kumbhar
+               0 File(s)              0 bytes
+               6 Dir(s)  13,600,083,968 bytes free
+
+C:\Users>cd ..
+
+C:\>cd GitTest
+
+C:\GitTest>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 6CB9-C15C
+
+ Directory of C:\GitTest
+
+09/30/2016  12:23 PM    <DIR>          .
+09/30/2016  12:23 PM    <DIR>          ..
+09/30/2016  12:08 PM                 7 .c
+09/30/2016  12:06 PM                 0 .class.txt
+09/30/2016  12:22 PM                14 .gitignore
+09/30/2016  12:21 PM                 0 ABC.jar
+09/30/2016  12:27 PM                33 MyCode1.txt
+09/30/2016  12:06 PM                 0 MyCode2.txt
+               6 File(s)             54 bytes
+               2 Dir(s)  13,600,083,968 bytes free
+
+C:\GitTest>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\GitTest>git log --online
+fatal: unrecognized argument: --online
+
+C:\GitTest>git log --oneline
+8d477af File MyCode1.txt has been modified
+f2a4c3b File .gitignore is added
+f1aa32d Files MyCode2.txt , .c and .class.txt are added
+d43d7d7 File MyCode1.txt created and 1st commit
+
+C:\GitTest>git branch
+* master
+
+C:\GitTest>git branch bug123
+
+C:\GitTest>git branch
+  bug123
+* master
+
+C:\GitTest>git checkout bug123
+Switched to branch 'bug123'
+
+C:\GitTest>git branch
+* bug123
+  master
+
+C:\GitTest>git commit -am "Space and Capital"
+On branch bug123
+nothing to commit, working tree clean
+
+C:\GitTest>git branch
+* bug123
+  master
+
+C:\GitTest>git log --oneline
+8d477af File MyCode1.txt has been modified
+f2a4c3b File .gitignore is added
+f1aa32d Files MyCode2.txt , .c and .class.txt are added
+d43d7d7 File MyCode1.txt created and 1st commit
+
+C:\GitTest>git checkout master
+Switched to branch 'master'
+
+C:\GitTest>git log --oneline
+8d477af File MyCode1.txt has been modified
+f2a4c3b File .gitignore is added
+f1aa32d Files MyCode2.txt , .c and .class.txt are added
+d43d7d7 File MyCode1.txt created and 1st commit
+
+C:\GitTest>git branch
+  bug123
+* master
+
+C:\GitTest>git merge bug123
+Already up-to-date.
+
+C:\GitTest>history History.txt
+'history' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\GitTest>
